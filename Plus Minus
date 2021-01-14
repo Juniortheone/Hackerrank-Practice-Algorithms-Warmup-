@@ -1,0 +1,45 @@
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the plusMinus function below.
+
+
+def plusMinus(arr):
+    """Initialise counters to count the number of times
+    a positive, negative, and zero number is encountered"""
+    
+    positive, negative, zero = 0, 0, 0 # This is called unpacking
+    # It is the same as initiliasing each variable individually;
+    # positive = 0
+    # negative = 0
+    # zero = 0
+    # A for loop with an if condition that increases counter
+    # as per the question
+    for num in arr:
+        if num == 0:
+            zero += 1
+        elif num < 0:
+            negative += 1
+        else:
+            positive += 1
+            
+    # Prints the result using % to set precision
+    print('%.6f'%(positive/n))
+    print("%.6f"%(negative/n))
+    print("%.6f"%(zero/n))
+    
+    
+if __name__ == '__main__':
+    n = int(input())
+
+    arr = list(map(int, input().rstrip().split()))
+    
+    plusMinus(arr)
+
+
+# Alternatively,
+# format and round can be used to set precision as well
+# Play around with those as well to solidy your understanding
